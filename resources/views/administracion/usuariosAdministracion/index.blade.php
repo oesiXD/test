@@ -4,7 +4,7 @@
 
 <h1>Usuarios</h1>
 <div class="jumbotron">
-
+@if(auth()->user()->hasRole(['editingteacher','manager']))
 <table class="table">
         <thead>
             <tr>
@@ -23,7 +23,6 @@
             <td>{{$U->firstname}}</td>
             <td>{{$U->lastname}}</td>
             <td>
-                {{$U->roles}}
                 @foreach ($U->roles as $role)
 {{$role->shortname}}
                 @endforeach
@@ -94,5 +93,5 @@
 
 
 </div>
-
+@endif
 @stop

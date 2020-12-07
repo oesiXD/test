@@ -39,8 +39,11 @@ class User extends Authenticatable
     ];
 
     public function roles()
+
     {
-        return $this->belongsToMany(Role::class,'mdluu_role_assignments','userid','roleid');
+          return   $this->belongsToMany(Role::class,'mdluu_role_assignments','userid','roleid')->withPivot('contextid')->where('contextid', '=', 259);
+
+
 
     }
 

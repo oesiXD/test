@@ -26,11 +26,13 @@ class CheckUser
 
      }
 
+        foreach ($U->roles as $role){
+           $dato= $role->shortname;
+        }
 
 
 
-
-        if(Auth::check() ){
+        if(Auth::check() && ($dato !='student')){
 
 
             return $next($request);
