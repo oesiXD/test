@@ -41,20 +41,20 @@
                                         </div>
 
                                         <div class="mt-3">
-                                            <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>
+                                            <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Ingresar</button>
                                         </div>
+ <div class="mt-5 text-center">
 
+                            <div>
+                                <p>© 2020 Citizen. Creado con  <i class="mdi mdi-heart text-danger"></i> por sus Desarrolladores</p>
+                            </div>
+                        </div>
                                     </form>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="mt-5 text-center">
 
-                            <div>
-                                <p>© 2020 Citizen. Creado con <i class="mdi mdi-heart text-danger"></i> por sus Desarrolladores</p>
-                            </div>
-                        </div>
 
                     </div>
                 </div>

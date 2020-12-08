@@ -39468,21 +39468,23 @@ var staticRenderFns = [
                               "btn btn-primary btn-block waves-effect waves-light",
                             attrs: { type: "submit" }
                           },
-                          [_vm._v("Log In")]
+                          [_vm._v("Ingresar")]
                         )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-5 text-center" }, [
+                        _c("div", [
+                          _c("p", [
+                            _vm._v("© 2020 Citizen. Creado con  "),
+                            _c("i", {
+                              staticClass: "mdi mdi-heart text-danger"
+                            }),
+                            _vm._v(" por sus Desarrolladores")
+                          ])
+                        ])
                       ])
                     ]
                   )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "mt-5 text-center" }, [
-              _c("div", [
-                _c("p", [
-                  _vm._v("© 2020 Citizen. Creado con "),
-                  _c("i", { staticClass: "mdi mdi-heart text-danger" }),
-                  _vm._v(" por sus Desarrolladores")
                 ])
               ])
             ])
