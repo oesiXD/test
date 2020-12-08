@@ -12,10 +12,10 @@
                         <source :src="video3" type="video/mp4">
                     </video>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8 col-lg-6 col-xl-5">
+                <div class="row justify-content-center ">
+                    <div class="col-md-8 col-lg-6 col-xl-4 mt-5">
                         <div class="card overflow-hidden mt-5">
-                            <div class="bg-soft-primary">
+                            <div class="bg-soft-primary ">
                                 <div class="row">
                                     <div class="col-7">
                                         <div class="text-primary p-4">
