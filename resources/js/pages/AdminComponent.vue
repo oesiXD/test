@@ -11,10 +11,7 @@
           <Sidebar></Sidebar>
 
             <!-- Left Sidebar End -->
-
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
+          <router-view/>
 
             <!-- end main content-->
            <Footer></Footer>

@@ -11,17 +11,19 @@ const routes= [
         path:"/",
         name:"login",
         component: Login
+
     },
+
     {
         path: "/admin",
         name: "admin",
         component: ()=>import("./pages/AdminComponent.vue")
     },
-    // {
-    //     path: "/cursos",
-    //     name:"cursos",
-    //     component: ()=>import("./pages/CursoComponent.vue")
-    // }
+     {
+         path: "/cursos",
+         name:"cursos",
+         component: ()=>import("./pages/CursoComponent.vue")
+     }
 ];
 
 const router= new Router({
