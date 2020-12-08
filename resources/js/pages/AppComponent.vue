@@ -2,7 +2,6 @@
     <div class="container">
                 <login-component></login-component>
         </div>
-    </div>
 </template>
 
 <script>

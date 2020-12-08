@@ -1938,7 +1938,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -37769,21 +37768,23 @@ var staticRenderFns = [
                               "btn btn-primary btn-block waves-effect waves-light",
                             attrs: { type: "submit" }
                           },
-                          [_vm._v("Log In")]
+                          [_vm._v("Ingresar")]
                         )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-5 text-center" }, [
+                        _c("div", [
+                          _c("p", [
+                            _vm._v("© 2020 Citizen. Creado con  "),
+                            _c("i", {
+                              staticClass: "mdi mdi-heart text-danger"
+                            }),
+                            _vm._v(" por sus Desarrolladores")
+                          ])
+                        ])
                       ])
                     ]
                   )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "mt-5 text-center" }, [
-              _c("div", [
-                _c("p", [
-                  _vm._v("© 2020 Citizen. Creado con "),
-                  _c("i", { staticClass: "mdi mdi-heart text-danger" }),
-                  _vm._v(" por sus Desarrolladores")
                 ])
               ])
             ])
@@ -53392,8 +53393,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\Horario\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\Horario\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
