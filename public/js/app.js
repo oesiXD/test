@@ -2029,8 +2029,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {};
@@ -37654,217 +37652,214 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "account-pages my-5 pt-sm-5" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row justify-content-center" }, [
-            _c("div", { staticClass: "col-md-8 col-lg-6 col-xl-5" }, [
-              _c("div", { staticClass: "card overflow-hidden" }, [
-                _c("div", { staticClass: "bg-soft-primary" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-7" }, [
-                      _c("div", { staticClass: "text-primary p-4" }, [
-                        _c("h5", { staticClass: "text-primary" }, [
-                          _vm._v("Welcome Back !")
-                        ]),
-                        _vm._v(" "),
-                        _c("p", [_vm._v("Sign in to continue to Skote.")])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-5 align-self-end" }, [
-                      _c("img", {
-                        staticClass: "img-fluid",
-                        attrs: { src: "assets/images/profile-img.png", alt: "" }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body pt-0" }, [
-                  _c("div", [
-                    _c("a", { attrs: { href: "index.html" } }, [
-                      _c(
-                        "div",
-                        { staticClass: "avatar-md profile-user-wid mb-4" },
-                        [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "avatar-title rounded-circle bg-light"
-                            },
-                            [
-                              _c("img", {
-                                staticClass: "rounded-circle",
-                                attrs: {
-                                  src: "assets/images/logo.svg",
-                                  alt: "",
-                                  height: "34"
-                                }
-                              })
-                            ]
-                          )
-                        ]
-                      )
+    return _c("div", { staticClass: "account-pages my-5 pt-sm-5" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-md-8 col-lg-6 col-xl-5" }, [
+            _c("div", { staticClass: "card overflow-hidden" }, [
+              _c("div", { staticClass: "bg-soft-primary" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-7" }, [
+                    _c("div", { staticClass: "text-primary p-4" }, [
+                      _c("h5", { staticClass: "text-primary" }, [
+                        _vm._v("Welcome Back !")
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [_vm._v("Sign in to continue to Skote.")])
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "p-2" }, [
-                    _c(
-                      "form",
-                      {
-                        staticClass: "form-horizontal",
-                        attrs: { action: "index.html" }
-                      },
-                      [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", { attrs: { for: "username" } }, [
-                            _vm._v("Username")
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "text",
-                              id: "username",
-                              placeholder: "Enter username"
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "form-group" }, [
-                          _c("label", { attrs: { for: "userpassword" } }, [
-                            _vm._v("Password")
-                          ]),
-                          _vm._v(" "),
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "password",
-                              id: "userpassword",
-                              placeholder: "Enter password"
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "custom-control custom-checkbox" },
-                          [
-                            _c("input", {
-                              staticClass: "custom-control-input",
-                              attrs: {
-                                type: "checkbox",
-                                id: "customControlInline"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "label",
-                              {
-                                staticClass: "custom-control-label",
-                                attrs: { for: "customControlInline" }
-                              },
-                              [_vm._v("Remember me")]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "mt-3" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass:
-                                "btn btn-primary btn-block waves-effect waves-light",
-                              attrs: { type: "submit" }
-                            },
-                            [_vm._v("Log In")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "mt-4 text-center" }, [
-                          _c("h5", { staticClass: "font-size-14 mb-3" }, [
-                            _vm._v("Sign in with")
-                          ]),
-                          _vm._v(" "),
-                          _c("ul", { staticClass: "list-inline" }, [
-                            _c("li", { staticClass: "list-inline-item" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "social-list-item bg-primary text-white border-primary",
-                                  attrs: { href: "javascript::void()" }
-                                },
-                                [_c("i", { staticClass: "mdi mdi-facebook" })]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "list-inline-item" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "social-list-item bg-info text-white border-info",
-                                  attrs: { href: "javascript::void()" }
-                                },
-                                [_c("i", { staticClass: "mdi mdi-twitter" })]
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("li", { staticClass: "list-inline-item" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "social-list-item bg-danger text-white border-danger",
-                                  attrs: { href: "javascript::void()" }
-                                },
-                                [_c("i", { staticClass: "mdi mdi-google" })]
-                              )
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "mt-4 text-center" }, [
-                          _c(
-                            "a",
-                            {
-                              staticClass: "text-muted",
-                              attrs: { href: "auth-recoverpw.html" }
-                            },
-                            [
-                              _c("i", { staticClass: "mdi mdi-lock mr-1" }),
-                              _vm._v(" Forgot your password?")
-                            ]
-                          )
-                        ])
-                      ]
-                    )
+                  _c("div", { staticClass: "col-5 align-self-end" }, [
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: { src: "assets/images/profile-img.png", alt: "" }
+                    })
                   ])
                 ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "mt-5 text-center" }, [
+              _c("div", { staticClass: "card-body pt-0" }, [
                 _c("div", [
-                  _c("p", [
-                    _vm._v("Don't have an account ? "),
+                  _c("a", { attrs: { href: "index.html" } }, [
                     _c(
-                      "a",
-                      {
-                        staticClass: "font-weight-medium text-primary",
-                        attrs: { href: "auth-register.html" }
-                      },
-                      [_vm._v(" Signup now ")]
+                      "div",
+                      { staticClass: "avatar-md profile-user-wid mb-4" },
+                      [
+                        _c(
+                          "span",
+                          {
+                            staticClass: "avatar-title rounded-circle bg-light"
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "rounded-circle",
+                              attrs: {
+                                src: "assets/images/logo.svg",
+                                alt: "",
+                                height: "34"
+                              }
+                            })
+                          ]
+                        )
+                      ]
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v("© 2020 Skote. Crafted with "),
-                    _c("i", { staticClass: "mdi mdi-heart text-danger" }),
-                    _vm._v(" by Themesbrand")
                   ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "p-2" }, [
+                  _c(
+                    "form",
+                    {
+                      staticClass: "form-horizontal",
+                      attrs: { action: "index.html" }
+                    },
+                    [
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("label", { attrs: { for: "username" } }, [
+                          _vm._v("Username")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+                            id: "username",
+                            placeholder: "Enter username"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("label", { attrs: { for: "userpassword" } }, [
+                          _vm._v("Password")
+                        ]),
+                        _vm._v(" "),
+                        _c("input", {
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "password",
+                            id: "userpassword",
+                            placeholder: "Enter password"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "custom-control custom-checkbox" },
+                        [
+                          _c("input", {
+                            staticClass: "custom-control-input",
+                            attrs: {
+                              type: "checkbox",
+                              id: "customControlInline"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "label",
+                            {
+                              staticClass: "custom-control-label",
+                              attrs: { for: "customControlInline" }
+                            },
+                            [_vm._v("Remember me")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-3" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "btn btn-primary btn-block waves-effect waves-light",
+                            attrs: { type: "submit" }
+                          },
+                          [_vm._v("Log In")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-4 text-center" }, [
+                        _c("h5", { staticClass: "font-size-14 mb-3" }, [
+                          _vm._v("Sign in with")
+                        ]),
+                        _vm._v(" "),
+                        _c("ul", { staticClass: "list-inline" }, [
+                          _c("li", { staticClass: "list-inline-item" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "social-list-item bg-primary text-white border-primary",
+                                attrs: { href: "javascript::void()" }
+                              },
+                              [_c("i", { staticClass: "mdi mdi-facebook" })]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "list-inline-item" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "social-list-item bg-info text-white border-info",
+                                attrs: { href: "javascript::void()" }
+                              },
+                              [_c("i", { staticClass: "mdi mdi-twitter" })]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("li", { staticClass: "list-inline-item" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "social-list-item bg-danger text-white border-danger",
+                                attrs: { href: "javascript::void()" }
+                              },
+                              [_c("i", { staticClass: "mdi mdi-google" })]
+                            )
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-4 text-center" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "text-muted",
+                            attrs: { href: "auth-recoverpw.html" }
+                          },
+                          [
+                            _c("i", { staticClass: "mdi mdi-lock mr-1" }),
+                            _vm._v(" Forgot your password?")
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-5 text-center" }, [
+              _c("div", [
+                _c("p", [
+                  _vm._v("Don't have an account ? "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "font-weight-medium text-primary",
+                      attrs: { href: "auth-register.html" }
+                    },
+                    [_vm._v(" Signup now ")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("© 2020 Skote. Crafted with "),
+                  _c("i", { staticClass: "mdi mdi-heart text-danger" }),
+                  _vm._v(" by Themesbrand")
                 ])
               ])
             ])
