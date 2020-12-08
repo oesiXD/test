@@ -19,13 +19,12 @@ Route::get('R', function () {
     return Role::with('user')->get();
 });
 
-Route::get('/',[ 'as'=>'home', 'uses'=>'PaginaController@home']);
 
 Route::resource('Administracion/usuarios','AdministracionUserController');
 
 Route::get('Administracion',[ 'as'=>'administracion', 'uses'=>'PaginaController@administracion'])->middleware('user');
 
-Route::get('login','Auth\LoginController@showLoginForm');
+Route::get('/','Auth\LoginController@showLoginForm');
 
 Route::post('login','Auth\LoginController@Login');
 
