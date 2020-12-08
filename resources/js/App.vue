@@ -1,6 +1,6 @@
 <template>
     <div>
-        <admin-component></admin-component>
+        <login-component></login-component>
     </div>
 </template>
 
