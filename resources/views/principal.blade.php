@@ -10,15 +10,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Gestion</title>
 </head>
-
-
-
 <body>
-    <div id="app">
-        @csrf
-        <app></app>
-    </div>
-
+    <div id="app"></div>
     <script src="js/app.js"></script>
 </body>
 

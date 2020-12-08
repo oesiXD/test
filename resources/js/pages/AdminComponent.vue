@@ -3,30 +3,38 @@
         <div id="layout-wrapper">
 
             <header id="page-topbar">
-                <header-component></header-component>
+               <Header></Header>
             </header>
 
             <!-- ========== Left Sidebar Start ========== -->
 
-            <sidebar-component></sidebar-component>
+          <Sidebar></Sidebar>
 
             <!-- Left Sidebar End -->
-
-
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
             <!-- ============================================================== -->
 
             <!-- end main content-->
-            <footer-component></footer-component>
+           <Footer></Footer>
         </div>
     </body>
 
 </template>
 
+
 <script>
+    import Header from  "../components/Header";
+    import Sidebar from  "../components/Sidebar";
+    import Footer from  "../components/Footer";
+
     export default {
+        components: {
+		Header,
+		Sidebar,
+		Footer
+	},
         mounted() {
             console.log('Component mounted yes')
         }

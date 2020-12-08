@@ -1,11 +1,14 @@
 const mix = require('laravel-mix');
 
-mix.js(['resources/js/app.js',
+mix.js([
+    'resources/js/app.js',
+        'resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js',
         'resources/assets/libs/metismenu/metisMenu.min.js',
         'resources/assets/libs/simplebar/simplebar.min.js',
+        'resources/assets/libs/node-waves/waves.min.js',
         'resources/assets/js/app.js'],
 
-        'public/js')
+        'public/js/app.js')
     .sass('resources/sass/app.scss', 'public/css');
 
     mix.styles([

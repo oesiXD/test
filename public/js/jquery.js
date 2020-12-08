@@ -1,6 +1,50 @@
 /******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	function webpackJsonpCallback(data) {
+/******/ 		var chunkIds = data[0];
+/******/ 		var moreModules = data[1];
+/******/
+/******/
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, resolves = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 				resolves.push(installedChunks[chunkId][0]);
+/******/ 			}
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
+/******/
+/******/ 		while(resolves.length) {
+/******/ 			resolves.shift()();
+/******/ 		}
+/******/
+/******/ 	};
+/******/
+/******/
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 	// Promise = chunk loading, 0 = chunk loaded
+/******/ 	var installedChunks = {
+/******/ 		"/js/jquery": 0
+/******/ 	};
+/******/
+/******/
+/******/
+/******/ 	// script path function
+/******/ 	function jsonpScriptSrc(chunkId) {
+/******/ 		return __webpack_require__.p + "" + ({}[chunkId]||chunkId) + ".js"
+/******/ 	}
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -26,6 +70,67 @@
 /******/ 		return module.exports;
 /******/ 	}
 /******/
+/******/ 	// This file contains only the entry chunk.
+/******/ 	// The chunk loading function for additional chunks
+/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
+/******/ 		var promises = [];
+/******/
+/******/
+/******/ 		// JSONP chunk loading for javascript
+/******/
+/******/ 		var installedChunkData = installedChunks[chunkId];
+/******/ 		if(installedChunkData !== 0) { // 0 means "already installed".
+/******/
+/******/ 			// a Promise means "currently loading".
+/******/ 			if(installedChunkData) {
+/******/ 				promises.push(installedChunkData[2]);
+/******/ 			} else {
+/******/ 				// setup Promise in chunk cache
+/******/ 				var promise = new Promise(function(resolve, reject) {
+/******/ 					installedChunkData = installedChunks[chunkId] = [resolve, reject];
+/******/ 				});
+/******/ 				promises.push(installedChunkData[2] = promise);
+/******/
+/******/ 				// start chunk loading
+/******/ 				var script = document.createElement('script');
+/******/ 				var onScriptComplete;
+/******/
+/******/ 				script.charset = 'utf-8';
+/******/ 				script.timeout = 120;
+/******/ 				if (__webpack_require__.nc) {
+/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
+/******/ 				}
+/******/ 				script.src = jsonpScriptSrc(chunkId);
+/******/
+/******/ 				// create error before stack unwound to get useful stacktrace later
+/******/ 				var error = new Error();
+/******/ 				onScriptComplete = function (event) {
+/******/ 					// avoid mem leaks in IE.
+/******/ 					script.onerror = script.onload = null;
+/******/ 					clearTimeout(timeout);
+/******/ 					var chunk = installedChunks[chunkId];
+/******/ 					if(chunk !== 0) {
+/******/ 						if(chunk) {
+/******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
+/******/ 							var realSrc = event && event.target && event.target.src;
+/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 							error.name = 'ChunkLoadError';
+/******/ 							error.type = errorType;
+/******/ 							error.request = realSrc;
+/******/ 							chunk[1](error);
+/******/ 						}
+/******/ 						installedChunks[chunkId] = undefined;
+/******/ 					}
+/******/ 				};
+/******/ 				var timeout = setTimeout(function(){
+/******/ 					onScriptComplete({ type: 'timeout', target: script });
+/******/ 				}, 120000);
+/******/ 				script.onerror = script.onload = onScriptComplete;
+/******/ 				document.head.appendChild(script);
+/******/ 			}
+/******/ 		}
+/******/ 		return Promise.all(promises);
+/******/ 	};
 /******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -78,6 +183,16 @@
 /******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// on error function for async loading
+/******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
+/******/
+/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray = jsonpArray.slice();
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
 /******/ 	// Load entry module and return exports
@@ -36455,72 +36570,6 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./resources/assets/js/app.js":
-/*!************************************!*\
-  !*** ./resources/assets/js/app.js ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-!function (s) {
-  "use strict";
-
-  var e,
-      t = localStorage.getItem("language"),
-      n = "eng";
-
-  function a(e) {
-    "eng" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/us.jpg" : "sp" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/spain.jpg" : "gr" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/germany.jpg" : "it" == e ? document.getElementById("header-lang-img").src = "assets/images/flags/italy.jpg" : "ru" == e && (document.getElementById("header-lang-img").src = "assets/images/flags/russia.jpg"), localStorage.setItem("language", e), null == (t = localStorage.getItem("language")) && a(n), s.getJSON("assets/lang/" + t + ".json", function (e) {
-      s("html").attr("lang", t), s.each(e, function (e, t) {
-        "head" === e && s(document).attr("title", t.title), s("[key='" + e + "']").text(t);
-      });
-    });
-  }
-
-  function o(e) {
-    1 == s("#light-mode-switch").prop("checked") && "light-mode-switch" === e ? (s("#dark-mode-switch").prop("checked", !1), s("#rtl-mode-switch").prop("checked", !1), s("#bootstrap-style").attr("href", "assets/css/bootstrap.min.css"), s("#app-style").attr("href", "assets/css/app.min.css"), sessionStorage.setItem("is_visited", "light-mode-switch")) : 1 == s("#dark-mode-switch").prop("checked") && "dark-mode-switch" === e ? (s("#light-mode-switch").prop("checked", !1), s("#rtl-mode-switch").prop("checked", !1), s("#bootstrap-style").attr("href", "assets/css/bootstrap-dark.min.css"), s("#app-style").attr("href", "assets/css/app-dark.min.css"), sessionStorage.setItem("is_visited", "dark-mode-switch")) : 1 == s("#rtl-mode-switch").prop("checked") && "rtl-mode-switch" === e && (s("#light-mode-switch").prop("checked", !1), s("#dark-mode-switch").prop("checked", !1), s("#bootstrap-style").attr("href", "assets/css/bootstrap.min.css"), s("#app-style").attr("href", "assets/css/app-rtl.min.css"), sessionStorage.setItem("is_visited", "rtl-mode-switch"));
-  }
-
-  function l() {
-    document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || (console.log("pressed"), s("body").removeClass("fullscreen-enable"));
-  }
-
-  s("#side-menu").metisMenu(), s("#vertical-menu-btn").on("click", function (e) {
-    e.preventDefault(), s("body").toggleClass("sidebar-enable"), 992 <= s(window).width() ? s("body").toggleClass("vertical-collpsed") : s("body").removeClass("vertical-collpsed");
-  }), s("#sidebar-menu a").each(function () {
-    var e = window.location.href.split(/[?#]/)[0];
-    this.href == e && (s(this).addClass("active"), s(this).parent().addClass("mm-active"), s(this).parent().parent().addClass("mm-show"), s(this).parent().parent().prev().addClass("mm-active"), s(this).parent().parent().parent().addClass("mm-active"), s(this).parent().parent().parent().parent().addClass("mm-show"), s(this).parent().parent().parent().parent().parent().addClass("mm-active"));
-  }), s(document).ready(function () {
-    var e;
-    0 < s("#sidebar-menu").length && 0 < s("#sidebar-menu .mm-active .active").length && 300 < (e = s("#sidebar-menu .mm-active .active").offset().top) && (e -= 300, s(".simplebar-content-wrapper").animate({
-      scrollTop: e
-    }, "slow"));
-  }), s(".navbar-nav a").each(function () {
-    var e = window.location.href.split(/[?#]/)[0];
-    this.href == e && (s(this).addClass("active"), s(this).parent().addClass("active"), s(this).parent().parent().addClass("active"), s(this).parent().parent().parent().addClass("active"), s(this).parent().parent().parent().parent().addClass("active"), s(this).parent().parent().parent().parent().parent().addClass("active"));
-  }), s('[data-toggle="fullscreen"]').on("click", function (e) {
-    e.preventDefault(), s("body").toggleClass("fullscreen-enable"), document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement ? document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen() : document.documentElement.requestFullscreen ? document.documentElement.requestFullscreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullscreen && document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-  }), document.addEventListener("fullscreenchange", l), document.addEventListener("webkitfullscreenchange", l), document.addEventListener("mozfullscreenchange", l), s(".right-bar-toggle").on("click", function (e) {
-    s("body").toggleClass("right-bar-enabled");
-  }), s(document).on("click", "body", function (e) {
-    0 < s(e.target).closest(".right-bar-toggle, .right-bar").length || s("body").removeClass("right-bar-enabled");
-  }), s(".dropdown-menu a.dropdown-toggle").on("click", function (e) {
-    return s(this).next().hasClass("show") || s(this).parents(".dropdown-menu").first().find(".show").removeClass("show"), s(this).next(".dropdown-menu").toggleClass("show"), !1;
-  }), s(function () {
-    s('[data-toggle="tooltip"]').tooltip();
-  }), s(function () {
-    s('[data-toggle="popover"]').popover();
-  }), window.sessionStorage && ((e = sessionStorage.getItem("is_visited")) ? (s(".right-bar input:checkbox").prop("checked", !1), s("#" + e).prop("checked", !0), o(e)) : sessionStorage.setItem("is_visited", "light-mode-switch")), s("#light-mode-switch, #dark-mode-switch, #rtl-mode-switch").on("change", function (e) {
-    o(e.target.id);
-  }), null != t && t !== n && console.log("lang", t), a(t), s(".language").on("click", function (e) {
-    a(s(this).attr("data-lang"));
-  }), s(window).on("load", function () {
-    s("#status").fadeOut(), s("#preloader").delay(350).fadeOut("slow");
-  }), Waves.init();
-}(jQuery);
-
-/***/ }),
-
 /***/ "./resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js":
 /*!********************************************************************!*\
   !*** ./resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js ***!
@@ -41985,12 +42034,13 @@ var routes = [{
   component: function component() {
     return Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./pages/AdminComponent.vue */ "./resources/js/pages/AdminComponent.vue"));
   }
-} // {
-//     path: "/cursos",
-//     name:"cursos",
-//     component: ()=>import("./pages/CursoComponent.vue")
-// }
-];
+}, {
+  path: "/cursos",
+  name: "cursos",
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./pages/CursoComponent.vue */ "./resources/js/pages/CursoComponent.vue"));
+  }
+}];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: routes,
   linkActiveClass: 'active'
@@ -42011,9 +42061,9 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./node_modules/jquery/dist/jquery.js ./resources/js/app.js ./resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js ./resources/assets/libs/metismenu/metisMenu.min.js ./resources/assets/libs/simplebar/simplebar.min.js ./resources/assets/libs/node-waves/waves.min.js ./resources/assets/js/app.js ./resources/sass/app.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./node_modules/jquery/dist/jquery.js ./resources/js/app.js ./resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js ./resources/assets/libs/metismenu/metisMenu.min.js ./resources/assets/libs/simplebar/simplebar.min.js ./resources/assets/libs/node-waves/waves.min.js ./resources/sass/app.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -42023,7 +42073,6 @@ __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/b
 __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/metismenu/metisMenu.min.js */"./resources/assets/libs/metismenu/metisMenu.min.js");
 __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/simplebar/simplebar.min.js */"./resources/assets/libs/simplebar/simplebar.min.js");
 __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/node-waves/waves.min.js */"./resources/assets/libs/node-waves/waves.min.js");
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/js/app.js */"./resources/assets/js/app.js");
 module.exports = __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

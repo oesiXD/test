@@ -10,17 +10,23 @@ const routes= [
     {
         path:"/",
         name:"login",
-        component: () => import("./pages/AdminComponent.vue")
+        component: Login
     },
     {
         path: "/admin",
         name: "admin",
         component: ()=>import("./pages/AdminComponent.vue")
-    }
+    },
+    // {
+    //     path: "/cursos",
+    //     name:"cursos",
+    //     component: ()=>import("./pages/CursoComponent.vue")
+    // }
 ];
 
 const router= new Router({
-    routes:routes
+    routes:routes,
+    linkActiveClass: 'active'
 });
 
 export default router;

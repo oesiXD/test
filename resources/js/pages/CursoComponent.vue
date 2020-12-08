@@ -1,6 +1,4 @@
 <template>
-
-
       <div class="main-content">
                 <div class="page-content">
                     <div class="container-fluid">
@@ -31,3 +29,11 @@
 
             </div>
 </template>
+<script>
+export default {
+
+        mounted() {
+            console.log('Component mounted yes')
+        }
+}
+</script>

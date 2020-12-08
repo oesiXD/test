@@ -17,10 +17,10 @@
                             </li>
 
                             <li>
-                                <a href="layouts-horizontal.html" class=" waves-effect">
-                                    <i class="bx bx-layout"></i>
-                                    <span key="t-horizontal">Horizontal</span>
-                                </a>
+                                <router-link to="/cursos" class="nav-link waves-effect" exact>
+                                    <i class="bx bx-clinic"></i>
+                                    <span key="t-horizontal">Cursos</span>
+                                </router-link>
                             </li>
 
                             <li class="menu-title" key="t-pages">Pages</li>
