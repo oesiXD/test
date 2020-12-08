@@ -21127,10 +21127,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8 col-lg-6 col-xl-5" }, [
+    return _c("div", { staticClass: "row justify-content-center " }, [
+      _c("div", { staticClass: "col-md-8 col-lg-6 col-xl-4 mt-5" }, [
         _c("div", { staticClass: "card overflow-hidden mt-5" }, [
-          _c("div", { staticClass: "bg-soft-primary" }, [
+          _c("div", { staticClass: "bg-soft-primary " }, [
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-7" }, [
                 _c("div", { staticClass: "text-primary p-4" }, [
@@ -42011,13 +42011,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./node_modules/jquery/dist/jquery.js ./resources/js/app.js ./resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js ./resources/assets/libs/metismenu/metisMenu.min.js ./resources/assets/libs/simplebar/simplebar.min.js ./resources/assets/libs/node-waves/waves.min.js ./resources/assets/js/app.js ./resources/sass/app.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js ./resources/assets/libs/metismenu/metisMenu.min.js ./resources/assets/libs/simplebar/simplebar.min.js ./resources/assets/libs/node-waves/waves.min.js ./resources/assets/js/app.js ./resources/sass/app.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/node_modules/jquery/dist/jquery.js */"./node_modules/jquery/dist/jquery.js");
 __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js */"./resources/assets/libs/bootstrap/js/bootstrap.bundle.min.js");
 __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/metismenu/metisMenu.min.js */"./resources/assets/libs/metismenu/metisMenu.min.js");
