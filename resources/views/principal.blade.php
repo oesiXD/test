@@ -13,11 +13,11 @@
 
 
 <body>
-    <div class="container-fluid" id="app">
-       <app-component></app-component>
+    <div id="app">
+        @csrf
+       <app></app>
     </div>
     <script src="/js/app.js"></script>
-    <script src="/js/all.js"></script>
 </body>
 
 </html>

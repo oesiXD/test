@@ -1,7 +1,6 @@
 <template>
-    <div class="container">
-                <login-component></login-component>
-        </div>
+    <div>
+        <admin-component></admin-component>
     </div>
 </template>
 

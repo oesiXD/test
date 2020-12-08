@@ -16,7 +16,10 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('app-component', require('./pages/AppComponent.vue').default);
+Vue.component('header-component', require('./components/Header.vue').default);
+Vue.component('sidebar-component', require('./components/Sidebar.vue').default);
+Vue.component('footer-component', require('./components/Footer.vue').default);
+Vue.component('admin-component', require('./pages/AdminComponent.vue').default);
 Vue.component('login-component', require('./pages/LoginComponent.vue').default);
 Vue.component('app', require('./App.vue').default);
 
