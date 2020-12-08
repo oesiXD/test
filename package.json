@@ -27,6 +27,7 @@
         "@fortawesome/fontawesome-free": "^5.14.0",
         "@popperjs/core": "^2.4.4",
         "browser-sync": "^2.26.12",
-        "browser-sync-webpack-plugin": "^2.0.1"
+        "browser-sync-webpack-plugin": "^2.0.1",
+        "vue-router": "^3.4.9"
     }
 }

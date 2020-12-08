@@ -29,6 +29,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * allows your team to easily build robust real-time web applications.
  */
 
+ let token =  document.head.querySelector('meta[name="crsf-token"]');
+
+ if(token){
+     window.axios.default.headers.common['X-CSRF-TOKEN'] = token.content;
+ }else{
+     console.error("CSRF token not found");
+ }
+
 // import Echo from 'laravel-echo';
 
 // window.Pusher = require('pusher-js');
