@@ -263,7 +263,7 @@ header #menu-action.active span {
                    <li class="dropdown" >
                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                         {{substr (strip_tags (auth()->user()->nombre ), 0, 10)}}
+                         {{substr (strip_tags (auth()->user()->username ), 0, 10)}}
                        </a>
 
                        <ul class="dropdown-menu " style="  left: -100px;" aria-labelledby="navbarDropdown">
@@ -301,7 +301,7 @@ header #menu-action.active span {
       <li><a href="{{route('usuarios.index')}}"><i class="fa fa-users"></i><span>Usuarios</span></a></li>
 
       @endif
-        <li><a href="{{route('administracion.productos')}}"><i class="fab fa-product-hunt"></i><span>Productos</span></a></li>
+        <li><a href="{{route('cursocategoria.index')}}"><i class="fab fa-product-hunt"></i><span>Cursos Categoria</span></a></li>
         <li><a href="#"><i class="fa fa-calendar"></i><span>Calendar</span></a></li>
         <li><a href="#"><i class="fa fa-envelope-o"></i><span>Messages</span></a></li>
         <li><a href="#"><i class="fa fa-table"></i><span>Data Table</span></a></li>

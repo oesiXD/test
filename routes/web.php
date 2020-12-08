@@ -32,4 +32,5 @@ Route::post('login','Auth\LoginController@Login');
 Route::get('logout','Auth\LoginController@Logout');
 
 
-Route::get('Administracion/productos',[ 'as'=>'administracion.productos', 'uses'=>'ProductosController@index']);
+Route::resource('Administracion/cursocategoria','CursoCategoriaController');
+

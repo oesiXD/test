@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Curso;
+use App\CursoCategoria;
 use Illuminate\Http\Request;
 
-class ProductosController extends Controller
+class CursoCategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        return view('administracion.productos.index');
+        $todosCC = CursoCategoria::all();
+        return view('administracion.curso.index',compact('todosCC'));
     }
 
     /**
@@ -56,7 +59,11 @@ class ProductosController extends Controller
      */
     public function edit($id)
     {
-        //
+
+
+        $todosC = Curso::where('category',$id)->get()->toArray();
+        dd($todosC);
+        return back()->with('todosC');
     }
 
     /**

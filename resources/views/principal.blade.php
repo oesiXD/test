@@ -46,6 +46,13 @@
 
                  </ul>
                  <form class="form-inline my-2 my-lg-0">
+  @if(auth()->check())
+  @if (auth()->user()->hasRole(['editingteacher','manager']))
+      <li><a href="{{route('administracion')}}"><i class="fa fa-users"></i><span>Admimnistracion</span></a></li>
+      @else
+      @endif
+      @else
+  @endif
                    <form class="form-inline">
                        @if (auth()->check())
                  <ul class="navbar-nav mr-auto">
