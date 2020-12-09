@@ -146,12 +146,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       cursos: [],
       student: [],
       studentc: [],
+      studentn: [],
+      studentnt: [],
       grupo: [],
       idgrup: "",
       name: '',
@@ -192,6 +206,14 @@ __webpack_require__.r(__webpack_exports__);
       this.namec = curso.fullname;
       axios.post("Administracion/studentcurso/" + this.idgrupc + "/edit").then(function (res) {
         _this4.studentc = res.data;
+      });
+      axios.post("Administracion/studentnotas/" + this.idgrupc + "/edit").then(function (res) {
+        _this4.studentn = res.data;
+        console.log(_this4.studentn);
+      });
+      axios.post("Administracion/studentnotast/" + this.idgrupc + "/edit").then(function (res) {
+        _this4.studentnt = res.data;
+        console.log(_this4.studentnt);
       });
     }
   },
@@ -476,69 +498,148 @@ var render = function() {
                                 _vm._v(" "),
                                 _vm.studentc.length > 0
                                   ? _c("table", { staticClass: "table" }, [
-                                      _vm._m(5, true),
+                                      _c("thead", [
+                                        _c(
+                                          "tr",
+                                          [
+                                            _c("th", [_vm._v("ID")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Nombre")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Nombre Corto")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Email")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("telefono")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Direcion")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Ciudad")]),
+                                            _vm._v(" "),
+                                            _vm._l(_vm.studentnt, function(c) {
+                                              return _c(
+                                                "th",
+                                                {
+                                                  directives: [
+                                                    {
+                                                      name: "show",
+                                                      rawName: "v-show",
+                                                      value:
+                                                        _vm.studentn.length > 0,
+                                                      expression:
+                                                        "studentn.length>0"
+                                                    }
+                                                  ],
+                                                  key: c.id
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    " " +
+                                                      _vm._s(c.itemname) +
+                                                      " "
+                                                  )
+                                                ]
+                                              )
+                                            })
+                                          ],
+                                          2
+                                        )
+                                      ]),
                                       _vm._v(" "),
                                       _c(
                                         "tbody",
                                         _vm._l(_vm.studentc, function(c) {
-                                          return _c("tr", { key: c.id }, [
-                                            _c("td", [
-                                              _vm._v(_vm._s(c.firstname))
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(_vm._s(c.lastname))
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [_vm._v(_vm._s(c.email))]),
-                                            _vm._v(" "),
-                                            c.phone1 == ""
-                                              ? _c("td", [
-                                                  _vm._v("No telefono")
-                                                ])
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            c.phone1 != ""
-                                              ? _c("td", [
-                                                  _vm._v(_vm._s(c.phone1))
-                                                ])
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            c.address == ""
-                                              ? _c("td", [
-                                                  _vm._v(
-                                                    "No notiene una direcion asociada"
-                                                  )
-                                                ])
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            c.address != ""
-                                              ? _c("td", [
-                                                  _vm._v(_vm._s(c.address))
-                                                ])
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            c.city == ""
-                                              ? _c("td", [
-                                                  _vm._v(
-                                                    "No notiene una ciudad asociada"
-                                                  )
-                                                ])
-                                              : _vm._e(),
-                                            _vm._v(" "),
-                                            c.city != ""
-                                              ? _c("td", [
-                                                  _vm._v(_vm._s(c.city))
-                                                ])
-                                              : _vm._e()
-                                          ])
+                                          return _c(
+                                            "tr",
+                                            { key: c.id },
+                                            [
+                                              _c("td", [_vm._v(_vm._s(c.id))]),
+                                              _vm._v(" "),
+                                              _c("td", [
+                                                _vm._v(_vm._s(c.firstname))
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("td", [
+                                                _vm._v(_vm._s(c.lastname))
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("td", [
+                                                _vm._v(_vm._s(c.email))
+                                              ]),
+                                              _vm._v(" "),
+                                              c.phone1 == ""
+                                                ? _c("td", [
+                                                    _vm._v("No telefono")
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.phone1 != ""
+                                                ? _c("td", [
+                                                    _vm._v(_vm._s(c.phone1))
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.address == ""
+                                                ? _c("td", [
+                                                    _vm._v(
+                                                      "No notiene una direcion asociada"
+                                                    )
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.address != ""
+                                                ? _c("td", [
+                                                    _vm._v(_vm._s(c.address))
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.city == ""
+                                                ? _c("td", [
+                                                    _vm._v(
+                                                      "No notiene una ciudad asociada"
+                                                    )
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.city != ""
+                                                ? _c("td", [
+                                                    _vm._v(_vm._s(c.city))
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm._l(_vm.studentn, function(n) {
+                                                return _c(
+                                                  "td",
+                                                  {
+                                                    directives: [
+                                                      {
+                                                        name: "show",
+                                                        rawName: "v-show",
+                                                        value: c.id == n.userid,
+                                                        expression:
+                                                          "c.id==n.userid"
+                                                      }
+                                                    ],
+                                                    key: n.id
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      " " +
+                                                        _vm._s(n.usermodified)
+                                                    )
+                                                  ]
+                                                )
+                                              })
+                                            ],
+                                            2
+                                          )
                                         }),
                                         0
                                       )
                                     ])
                                   : _vm._e(),
                                 _vm._v(" "),
-                                _vm._m(6, true)
+                                _vm._m(5, true)
                               ])
                             ]
                           )
@@ -613,7 +714,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Direcion")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Ciudad")])
+        _c("th", [_vm._v("Ciudad")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Nota")])
       ])
     ])
   },
@@ -648,26 +751,6 @@ var staticRenderFns = [
       },
       [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Nombre")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Nombre Corto")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Email")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("telefono")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Direcion")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Ciudad")])
-      ])
-    ])
   },
   function() {
     var _vm = this

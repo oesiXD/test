@@ -54,6 +54,7 @@
                   <th>telefono</th>
                   <th>Direcion</th>
                   <th>Ciudad</th>
+                  <th>Nota</th>
                 </tr>
               </thead>
 
@@ -93,17 +94,25 @@
   <table v-if="studentc.length > 0" class="table">
               <thead>
                 <tr>
+                  <th>ID</th>
                   <th>Nombre</th>
                   <th>Nombre Corto</th>
                   <th>Email</th>
                   <th>telefono</th>
                   <th>Direcion</th>
                   <th>Ciudad</th>
+
+
+
+                  <th v-show="studentn.length>0" v-for="c in studentnt" :key="c.id"> {{ c.itemname}} </th>
+
+
                 </tr>
               </thead>
 
               <tbody>
                 <tr v-for="c in studentc" :key="c.id">
+                    <td>{{ c.id }}</td>
                   <td>{{ c.firstname }}</td>
                   <td>{{ c.lastname }}</td>
                   <td>{{ c.email }}</td>
@@ -113,6 +122,9 @@
                   <td v-if="c.address !=''" >{{c.address}}</td>
                   <td v-if="c.city ==''" >No notiene una ciudad asociada</td>
                   <td v-if="c.city !=''" >{{c.city}}</td>
+
+                     <td v-show="c.id==n.userid" v-for="n in studentn" :key="n.id"> {{ n.usermodified }}</td>
+
                 </tr>
               </tbody>
 
@@ -142,6 +154,8 @@ export default {
       cursos: [],
       student: [],
        studentc: [],
+       studentn:[],
+      studentnt:[],
       grupo:[],
       idgrup:"",
       name:'',
@@ -171,11 +185,23 @@ export default {
       });
 
     },
-    VerStudiantesCurso(curso){
+    VerStudiantesCurso(curso,){
          this.idgrupc = curso.id;
         this.namec = curso.fullname;
         axios.post("Administracion/studentcurso/"+this.idgrupc+"/edit").then((res) => {
         this.studentc = res.data;
+      });
+
+       axios.post("Administracion/studentnotas/"+this.idgrupc+"/edit").then((res) => {
+
+        this.studentn = res.data;
+        console.log(this.studentn);
+      });
+
+
+ axios.post("Administracion/studentnotast/"+this.idgrupc+"/edit").then((res) => {
+        this.studentnt = res.data;
+        console.log(this.studentnt);
       });
 
     }

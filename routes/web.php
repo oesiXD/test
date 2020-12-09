@@ -34,6 +34,8 @@ Route::get('Administracion/nivel','CursoController@nivel');
 Route::get('Administracion/curso','CursoController@index');
 Route::post('Administracion/student/{id}/edit','CursoController@edit');
 Route::post('Administracion/studentcurso/{id}/edit','CursoController@editc');
+Route::post('Administracion/studentnotas/{id}/edit','CursoController@editn');
+Route::post('Administracion/studentnotast/{id}/edit','CursoController@editnt');
 
 
 Route::resource('Administracion/cursocategoria','CursoCategoriaController');
