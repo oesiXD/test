@@ -22,3 +22,5 @@ mix.js([
 mix.browserSync({
     proxy:'http://public.test/'
 });
+
+

@@ -6,34 +6,55 @@
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
-                                <div class="page-title-box d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 font-size-18">Starter Page</h4>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Descripcion</th>
+                                            <th>Visible</th>
+                                            <th>Aciones</th>
+                                        </tr>
+                                    </thead>
 
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Utility</a></li>
-                                            <li class="breadcrumb-item active">Starter Page</li>
-                                        </ol>
-                                    </div>
+                        <tbody>
+                            <tr v-for="curso in cursos" :key="curso.id">
+                                <td>{{curso.name}}</td>
+                                <td>{{curso.description}}</td>
+                                <td>{{curso.visible}} </td>
 
-                                </div>
-                            </div>
+                                <td>  <a class="btn btn-info btn-xs"  data-toggle="modal"   >
+                                    VER Cursos Asociados
+                                </a>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
                         </div>
                         <!-- end page title -->
-
                     </div> <!-- container-fluid -->
                 </div>
                 <!-- End Page-content -->
-
-
-
             </div>
 </template>
 <script>
 export default {
-
-        mounted() {
-            console.log('Component mounted yes')
+    data() {
+        return {
+            cursos:[]
         }
+    },
+    methods: {
+        getCursos(){
+            axios.get("Administracion/cursocategoria").then((res)=>{
+                    console.log(res);
+                    this.cursos = res.data;
+            });
+        }
+    },
+    created() {
+        this.getCursos();
+    },
 }
 </script>

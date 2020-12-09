@@ -16,7 +16,7 @@ class CursoCategoriaController extends Controller
     public function index()
     {
         $todosCC = CursoCategoria::all();
-        return view('administracion.curso.index',compact('todosCC'));
+        return $todosCC;
     }
 
     /**
