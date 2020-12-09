@@ -174,7 +174,6 @@ export default {
     VerStudiantesCurso(curso){
          this.idgrupc = curso.id;
         this.namec = curso.fullname;
-        alert(this.idgrupc);
         axios.post("Administracion/studentcurso/"+this.idgrupc+"/edit").then((res) => {
         this.studentc = res.data;
       });

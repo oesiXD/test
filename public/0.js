@@ -190,7 +190,6 @@ __webpack_require__.r(__webpack_exports__);
 
       this.idgrupc = curso.id;
       this.namec = curso.fullname;
-      alert(this.idgrupc);
       axios.post("Administracion/studentcurso/" + this.idgrupc + "/edit").then(function (res) {
         _this4.studentc = res.data;
       });
