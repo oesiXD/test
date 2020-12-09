@@ -22,6 +22,12 @@
                                     <span key="t-horizontal">Cursos</span>
                                 </router-link>
                             </li>
+                             <li>
+                                <router-link to="/asig" class="nav-link waves-effect" >
+                                    <i class="bx bx-clinic"></i>
+                                    <span key="t-horizontal">Asignatura</span>
+                                </router-link>
+                            </li>
 
                             <li class="menu-title" key="t-pages">Pages</li>
 

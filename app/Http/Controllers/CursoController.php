@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Curso;
-use App\CursoCategoria;
+use App\Grupo;
+use App\CursoMember;
+use App\GroupMember;
 use Illuminate\Http\Request;
 
-class CursoCategoriaController extends Controller
+class CursoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +18,13 @@ class CursoCategoriaController extends Controller
      */
     public function index()
     {
-        $todosCC = CursoCategoria::all();
+        $todosCC = Curso::all();
         return $todosCC;
+    }
+    public function nivel()
+    {
+        $todoG = Grupo::all();
+        return $todoG;
     }
 
     /**
@@ -59,8 +67,13 @@ class CursoCategoriaController extends Controller
      */
     public function edit($id)
     {
-        $todosC = Curso::where('category',$id)->get()->toArray();
-        return $todosC;
+        $student = GroupMember::join('mdluu_user', 'mdluu_user.id', '=', 'mdluu_groups_members.userid')->where('groupid',$id)->get()->toArray();
+        return $student;
+    }
+    public function editc($id)
+    {
+        $student = CursoMember::join('mdluu_user', 'mdluu_user.id', '=', 'mdluu_course_completions.userid')->where('course',$id)->get()->toArray();
+        return $student;
     }
 
     /**

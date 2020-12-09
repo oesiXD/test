@@ -2148,6 +2148,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -39964,6 +39970,25 @@ var render = function() {
               1
             ),
             _vm._v(" "),
+            _c(
+              "li",
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link waves-effect",
+                    attrs: { to: "/asig" }
+                  },
+                  [
+                    _c("i", { staticClass: "bx bx-clinic" }),
+                    _vm._v(" "),
+                    _c("span", { key: "t-horizontal" }, [_vm._v("Asignatura")])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
             _c("li", { key: "t-pages", staticClass: "menu-title" }, [
               _vm._v("Pages")
             ]),
@@ -58410,7 +58435,13 @@ var routes = [{
   path: "/cursos",
   name: "cursos",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./pages/CursoComponent.vue */ "./resources/js/pages/CursoComponent.vue"));
+    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./pages/CursoComponent.vue */ "./resources/js/pages/CursoComponent.vue"));
+  }
+}, {
+  path: "/asig",
+  name: "asig",
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./pages/AsigComponent.vue */ "./resources/js/pages/AsigComponent.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({

@@ -30,6 +30,11 @@ Route::post('login','Auth\LoginController@Login');
 
 Route::get('logout','Auth\LoginController@Logout');
 
+Route::get('Administracion/nivel','CursoController@nivel');
+Route::get('Administracion/curso','CursoController@index');
+Route::post('Administracion/student/{id}/edit','CursoController@edit');
+Route::post('Administracion/studentcurso/{id}/edit','CursoController@editc');
+
 
 Route::resource('Administracion/cursocategoria','CursoCategoriaController');
-
+Route::post('Administracion/cursocategoria/{id}/edit', 'CursoCategoriaController@edit');
