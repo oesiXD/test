@@ -23,9 +23,15 @@
                                 </router-link>
                             </li>
                              <li>
+<<<<<<< HEAD
                                 <router-link to="/usuarios" class="nav-link waves-effect">
                                     <i class="bx bx-user-circle"></i>
                                     <span key="t-starter-page">Usuarios</span>
+=======
+                                <router-link to="/asig" class="nav-link waves-effect" >
+                                    <i class="bx bx-clinic"></i>
+                                    <span key="t-horizontal">Asignatura</span>
+>>>>>>> 71fa38c6a5140e9cd27e5b87689a8f4aa07e705c
                                 </router-link>
                             </li>
 

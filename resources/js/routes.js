@@ -23,7 +23,12 @@ const routes= [
          path: "/cursos",
          name:"cursos",
          component: ()=>import("./pages/CursoComponent.vue")
-     }
+     },
+     {
+        path: "/asig",
+        name:"asig",
+        component: ()=>import("./pages/AsigComponent.vue")
+    }
 ];
 
 const router= new Router({
