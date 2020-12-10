@@ -8,9 +8,8 @@
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title" key="t-menu">Menu</li>
-
                             <li>
-                                <router-link to="/usuarios" class="nav-link waves-effect">
+                                <router-link to="/" class="nav-link waves-effect">
                                     <i class="bx bx-bar-chart-alt-2"></i>
                                     <span key="t-starter-page">Inicio</span>
                                 </router-link>
@@ -23,15 +22,13 @@
                                 </router-link>
                             </li>
                              <li>
-<<<<<<< HEAD
                                 <router-link to="/usuarios" class="nav-link waves-effect">
                                     <i class="bx bx-user-circle"></i>
                                     <span key="t-starter-page">Usuarios</span>
-=======
+                                </router-link>
                                 <router-link to="/asig" class="nav-link waves-effect" >
                                     <i class="bx bx-clinic"></i>
                                     <span key="t-horizontal">Asignatura</span>
->>>>>>> 71fa38c6a5140e9cd27e5b87689a8f4aa07e705c
                                 </router-link>
                             </li>
 

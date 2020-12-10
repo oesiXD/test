@@ -2157,9 +2157,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -38836,8 +38833,244 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "vertical-menu" }, [
+    _c("div", { staticClass: "h-100", attrs: { "data-simplebar": "" } }, [
+      _c("div", { attrs: { id: "sidebar-menu" } }, [
+        _c(
+          "ul",
+          {
+            staticClass: "metismenu list-unstyled",
+            attrs: { id: "side-menu" }
+          },
+          [
+            _c("li", { key: "t-menu", staticClass: "menu-title" }, [
+              _vm._v("Menu")
+            ]),
+            _vm._v(" "),
+            _c(
+              "li",
+              [
+                _c(
+                  "router-link",
+                  { staticClass: "nav-link waves-effect", attrs: { to: "/" } },
+                  [
+                    _c("i", { staticClass: "bx bx-bar-chart-alt-2" }),
+                    _vm._v(" "),
+                    _c("span", { key: "t-starter-page" }, [_vm._v("Inicio")])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link waves-effect",
+                    attrs: { to: "/cursos", exact: "" }
+                  },
+                  [
+                    _c("i", { staticClass: "bx bx-clinic" }),
+                    _vm._v(" "),
+                    _c("span", { key: "t-horizontal" }, [_vm._v("Cursos")])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "li",
+              [
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link waves-effect",
+                    attrs: { to: "/usuarios" }
+                  },
+                  [
+                    _c("i", { staticClass: "bx bx-user-circle" }),
+                    _vm._v(" "),
+                    _c("span", { key: "t-starter-page" }, [_vm._v("Usuarios")])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "nav-link waves-effect",
+                    attrs: { to: "/asig" }
+                  },
+                  [
+                    _c("i", { staticClass: "bx bx-clinic" }),
+                    _vm._v(" "),
+                    _c("span", { key: "t-horizontal" }, [_vm._v("Asignatura")])
+                  ]
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("li", { key: "t-pages", staticClass: "menu-title" }, [
+              _vm._v("Pages")
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "has-arrow waves-effect",
+                  attrs: { href: "javascript: void(0);" }
+                },
+                [
+                  _c("i", { staticClass: "bx bx-user-circle" }),
+                  _vm._v(" "),
+                  _c("span", { key: "t-authentication" }, [
+                    _vm._v("Authentication")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "ul",
+                {
+                  staticClass: "sub-menu",
+                  attrs: { "aria-expanded": "false" }
+                },
+                [
+                  _c("li", [
+                    _c(
+                      "a",
+                      { key: "t-login", attrs: { href: "auth-login.html" } },
+                      [_vm._v("Login")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        key: "t-register",
+                        attrs: { href: "auth-register.html" }
+                      },
+                      [_vm._v("Register")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        key: "t-recover-password",
+                        attrs: { href: "auth-recoverpw.html" }
+                      },
+                      [_vm._v("Recover Password")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        key: "t-lock-screen",
+                        attrs: { href: "auth-lock-screen.html" }
+                      },
+                      [_vm._v("Lock Screen")]
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "has-arrow waves-effect",
+                  attrs: { href: "javascript: void(0);" }
+                },
+                [
+                  _c("i", { staticClass: "bx bx-share-alt" }),
+                  _vm._v(" "),
+                  _c("span", { key: "t-multi-level" }, [_vm._v("Multi Level")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "sub-menu", attrs: { "aria-expanded": "true" } },
+                [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        key: "t-level-1-1",
+                        attrs: { href: "javascript: void(0);" }
+                      },
+                      [_vm._v("Level 1.1")]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        key: "t-level-1-2",
+                        staticClass: "has-arrow",
+                        attrs: { href: "javascript: void(0);" }
+                      },
+                      [_vm._v("Level 1.2")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "ul",
+                      {
+                        staticClass: "sub-menu",
+                        attrs: { "aria-expanded": "true" }
+                      },
+                      [
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              key: "t-level-2-1",
+                              attrs: { href: "javascript: void(0);" }
+                            },
+                            [_vm._v("Level 2.1")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              key: "t-level-2-2",
+                              attrs: { href: "javascript: void(0);" }
+                            },
+                            [_vm._v("Level 2.2")]
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ]
+        )
+      ])
+    ])
+  ])
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 

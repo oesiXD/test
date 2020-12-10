@@ -89,44 +89,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -173,8 +135,222 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
-var staticRenderFns = []
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "main-content" }, [
+    _c("div", { staticClass: "page-content" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12" }, [
+            _c("table", { staticClass: "table" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                _vm._l(_vm.cursos, function(curso) {
+                  return _c("tr", { key: curso.id }, [
+                    _c("td", [_vm._v(_vm._s(curso.name))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(curso.description))]),
+                    _vm._v(" "),
+                    curso.visible == 1 ? _c("td", [_vm._v("si")]) : _vm._e(),
+                    _vm._v(" "),
+                    curso.visible == 0 ? _c("td", [_vm._v("no")]) : _vm._e(),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-info btn-xs",
+                          attrs: {
+                            "data-target": "#exampleModalCenter",
+                            "data-toggle": "modal"
+                          },
+                          on: {
+                            click: function($event) {
+                              return _vm.VerCursos(curso)
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                    Ver Asignatura Asociadas\n                  "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "modal fade",
+                        attrs: {
+                          id: "exampleModalCenter",
+                          tabindex: "-1",
+                          role: "dialog",
+                          "aria-labelledby": "exampleModalCenterTitle",
+                          "aria-hidden": "true"
+                        }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "modal-dialog modal-xl modal-dialog-centered",
+                            attrs: { role: "document" }
+                          },
+                          [
+                            _c("div", { staticClass: "modal-content " }, [
+                              _c("div", { staticClass: "modal-header" }, [
+                                _c(
+                                  "h5",
+                                  {
+                                    staticClass: "modal-title",
+                                    attrs: { id: "exampleModalLongTitle" }
+                                  },
+                                  [_vm._v(" " + _vm._s(_vm.name) + " ")]
+                                ),
+                                _vm._v(" "),
+                                _vm._m(1, true)
+                              ]),
+                              _vm._v(" "),
+                              _vm.cursosc.length == 0
+                                ? _c("h1", [_vm._v("No Tiene cursos")])
+                                : _vm._e(),
+                              _vm._v(" "),
+                              _vm.cursosc.length > 0
+                                ? _c("table", { staticClass: "table" }, [
+                                    _vm._m(2, true),
+                                    _vm._v(" "),
+                                    _c(
+                                      "tbody",
+                                      _vm._l(_vm.cursosc, function(c) {
+                                        return _c("tr", { key: c.id }, [
+                                          _c("td", [
+                                            _vm._v(_vm._s(c.fullname))
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _vm._v(_vm._s(c.shortname))
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _vm._v(_vm._s(c.description))
+                                          ]),
+                                          _vm._v(" "),
+                                          c.visible == 1
+                                            ? _c("td", [_vm._v("si")])
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          c.visible == 0
+                                            ? _c("td", [_vm._v("no")])
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          c.showgrades == 1
+                                            ? _c("td", [_vm._v("si")])
+                                            : _vm._e(),
+                                          _vm._v(" "),
+                                          c.showgrades == 0
+                                            ? _c("td", [_vm._v("no")])
+                                            : _vm._e()
+                                        ])
+                                      }),
+                                      0
+                                    )
+                                  ])
+                                : _vm._e(),
+                              _vm._v(" "),
+                              _vm._m(3, true)
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                }),
+                0
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Nombre")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Descripcion")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Visible")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Aciones")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Nombre")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Nombre Corto")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Descripcion")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Visible")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Mostrar Calificaciones")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Aciones")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-footer" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_vm._v("Cerrar")]
+      )
+    ])
+  }
+]
+render._withStripped = true
 
 
 

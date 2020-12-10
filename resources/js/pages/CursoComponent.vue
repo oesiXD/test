@@ -1,39 +1,4 @@
 <template>
-<<<<<<< HEAD
-      <div class="main-content">
-                <div class="page-content">
-                    <div class="container-fluid">
-
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Nombre</th>
-                                            <th>Descripcion</th>
-                                            <th>Visible</th>
-                                            <th>Aciones</th>
-                                        </tr>
-                                    </thead>
-
-                        <tbody>
-                            <tr v-for="curso in cursos" :key="curso.id">
-                                <td>{{curso.name}}</td>
-                                <td>{{curso.description}}</td>
-                                <td>{{curso.visible}} </td>
-                                <td>  <a class="btn btn-info btn-xs"  data-toggle="modal"   >
-                                    VER Cursos Asociados
-                                </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </div>
-                        </div>
-                        <!-- end page title -->
-                    </div> <!-- container-fluid -->
-=======
   <div class="main-content">
     <div class="page-content">
       <div class="container-fluid">
@@ -58,7 +23,7 @@
 
                   <td>
                     <a class="btn btn-info btn-xs" @click="VerCursos(curso)"  data-target="#exampleModalCenter" data-toggle="modal">
-                      VER Cursos Asociados
+                      Ver Asignatura Asociadas
                     </a>
                   </td>
                           <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -70,37 +35,34 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                   <h1 v-if="cursosc.length == 0">No Tiene cursos</h1>
-  <table v-if="cursosc.length > 0" class="table">
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Nombre Corto</th>
-                  <th>Descripcion</th>
-                  <th>Visible</th>
-                  <th>Mostrar Calificaciones</th>
-                  <th>Aciones</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr v-for="c in cursosc" :key="c.id">
-                  <td>{{ c.fullname }}</td>
-                  <td>{{ c.shortname }}</td>
-                  <td>{{ c.description }}</td>
-                  <td v-if="c.visible ==1" >si</td>
-                  <td v-if="c.visible ==0" >no</td>
-                  <td v-if="c.showgrades ==1" >si</td>
-                  <td v-if="c.showgrades ==0" >no</td>
-
-                </tr>
-              </tbody>
+                    <h1 v-if="cursosc.length == 0">No Tiene cursos</h1>
+                        <table v-if="cursosc.length > 0" class="table">
+                            <thead>
+                                <tr>
+                                <th>Nombre</th>
+                                <th>Nombre Corto</th>
+                                <th>Descripcion</th>
+                                <th>Visible</th>
+                                <th>Mostrar Calificaciones</th>
+                                <th>Aciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="c in cursosc" :key="c.id">
+                                <td>{{ c.fullname }}</td>
+                                <td>{{ c.shortname }}</td>
+                                <td>{{ c.description }}</td>
+                                <td v-if="c.visible ==1" >si</td>
+                                <td v-if="c.visible ==0" >no</td>
+                                <td v-if="c.showgrades ==1" >si</td>
+                                <td v-if="c.showgrades ==0" >no</td>
+                                </tr>
+                            </tbody>
 
             </table>
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
->>>>>>> 71fa38c6a5140e9cd27e5b87689a8f4aa07e705c
                 </div>
               </div>
             </div>

@@ -80,7 +80,7 @@ class CursoController extends Controller
     public function editn($id)
     {
 
-        $studen = Item::join('mdluu_grade_grades', 'mdluu_grade_grades.itemid', '=', 'mdluu_grade_items.id')->where('courseid',$id)->get()->toArray();
+        $studen = Item::select("mdluu_grade_grades.rawgrade")->join('mdluu_grade_grades', 'mdluu_grade_grades.itemid', '=', 'mdluu_grade_items.id')->where('courseid',$id)->get()->toArray();
         return  $studen;
     }
     public function editnt($id)

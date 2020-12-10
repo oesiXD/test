@@ -150,14 +150,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -202,6 +194,7 @@ __webpack_require__.r(__webpack_exports__);
     VerStudiantesCurso: function VerStudiantesCurso(curso) {
       var _this4 = this;
 
+      //traer estudiantes, traer notas estudiantes, trae los nombre de los campos
       this.idgrupc = curso.id;
       this.namec = curso.fullname;
       axios.post("Administracion/studentcurso/" + this.idgrupc + "/edit").then(function (res) {
@@ -624,8 +617,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      " " +
-                                                        _vm._s(n.usermodified)
+                                                      " " + _vm._s(n.rawgrade)
                                                     )
                                                   ]
                                                 )
