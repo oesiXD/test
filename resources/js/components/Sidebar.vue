@@ -10,16 +10,22 @@
                             <li class="menu-title" key="t-menu">Menu</li>
 
                             <li>
-                                <a href="pages-starter.html" class=" waves-effect">
-                                    <i class="bx bx-file"></i>
-                                    <span key="t-starter-page">Starter Page</span>
-                                </a>
+                                <router-link to="/usuarios" class="nav-link waves-effect">
+                                    <i class="bx bx-bar-chart-alt-2"></i>
+                                    <span key="t-starter-page">Inicio</span>
+                                </router-link>
                             </li>
 
                             <li>
                                 <router-link to="/cursos" class="nav-link waves-effect" exact>
                                     <i class="bx bx-clinic"></i>
                                     <span key="t-horizontal">Cursos</span>
+                                </router-link>
+                            </li>
+                             <li>
+                                <router-link to="/usuarios" class="nav-link waves-effect">
+                                    <i class="bx bx-user-circle"></i>
+                                    <span key="t-starter-page">Usuarios</span>
                                 </router-link>
                             </li>
 

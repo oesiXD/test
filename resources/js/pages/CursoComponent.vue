@@ -21,11 +21,9 @@
                                 <td>{{curso.name}}</td>
                                 <td>{{curso.description}}</td>
                                 <td>{{curso.visible}} </td>
-
                                 <td>  <a class="btn btn-info btn-xs"  data-toggle="modal"   >
                                     VER Cursos Asociados
                                 </a>
-
                                 </td>
                             </tr>
                         </tbody>
