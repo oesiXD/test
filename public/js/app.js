@@ -57364,13 +57364,13 @@ var routes = [{
   path: "/cursos",
   name: "cursos",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./pages/CursoComponent.vue */ "./resources/js/pages/CursoComponent.vue"));
+    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./pages/CursoComponent.vue */ "./resources/js/pages/CursoComponent.vue"));
   }
 }, {
   path: "/asig",
   name: "asig",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./pages/AsigComponent.vue */ "./resources/js/pages/AsigComponent.vue"));
+    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./pages/AsigComponent.vue */ "./resources/js/pages/AsigComponent.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
@@ -57399,12 +57399,12 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/metismenu/metisMenu.min.js */"./resources/assets/libs/metismenu/metisMenu.min.js");
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/simplebar/simplebar.min.js */"./resources/assets/libs/simplebar/simplebar.min.js");
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/libs/node-waves/waves.min.js */"./resources/assets/libs/node-waves/waves.min.js");
-__webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/assets/js/app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! /Volumes/HDD/proyectos/test/test/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\Horario\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\laragon\www\Horario\resources\assets\libs\metismenu\metisMenu.min.js */"./resources/assets/libs/metismenu/metisMenu.min.js");
+__webpack_require__(/*! C:\laragon\www\Horario\resources\assets\libs\simplebar\simplebar.min.js */"./resources/assets/libs/simplebar/simplebar.min.js");
+__webpack_require__(/*! C:\laragon\www\Horario\resources\assets\libs\node-waves\waves.min.js */"./resources/assets/libs/node-waves/waves.min.js");
+__webpack_require__(/*! C:\laragon\www\Horario\resources\assets\js\app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\Horario\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

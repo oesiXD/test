@@ -69,6 +69,8 @@
                   <td v-if="c.address !=''" >{{c.address}}</td>
                   <td v-if="c.city ==''" >No notiene una ciudad asociada</td>
                   <td v-if="c.city !=''" >{{c.city}}</td>
+
+
                 </tr>
               </tbody>
 
@@ -91,17 +93,14 @@
                   </button>
                 </div>
                    <h1 v-if="studentc.length == 0">No Tiene studiantes</h1>
-                    <table v-if="studentc.length > 0" class="table">
+                    <table v-if="studentc.length > 0"  class="table">
                         <thead>
-                            <tr>
+                            <tr >
                                 <th>ID</th>
                                 <th>Nombre</th>
-                                <th>Nombre Corto</th>
-                                <th>Email</th>
-                                <th>telefono</th>
-                                <th>Direcion</th>
+                                <th>Apellido</th>
                                 <th>Ciudad</th>
-                                <th v-show="studentn.length>0" v-for="c in studentnt" :key="c.id"> {{ c.itemname}} </th>
+                                <th v-show="studentn.length>0&&studentc[0].id ==c.userid" v-for="c in studentnt" :key="c.id"> {{ c.itemname}} </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -109,19 +108,14 @@
                                 <td>{{ c.id }}</td>
                                 <td>{{ c.firstname }}</td>
                                 <td>{{ c.lastname }}</td>
-                                <td>{{ c.email }}</td>
-                                <td v-if="c.phone1 ==''" >No telefono</td>
-                                <td v-if="c.phone1 !=''" >{{c.phone1}}</td>
-                                <td v-if="c.address ==''" >No notiene una direcion asociada</td>
-                                <td v-if="c.address !=''" >{{c.address}}</td>
                                 <td v-if="c.city ==''" >No notiene una ciudad asociada</td>
                                 <td v-if="c.city !=''" >{{c.city}}</td>
                                 <td v-show="c.id==n.userid" v-for="n in studentn" :key="n.id"> {{ n.rawgrade }}</td>
+
                             </tr>
                         </tbody>
 
                     </table>
-
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                 </div>
@@ -177,7 +171,7 @@ export default {
       });
 
     },
-    VerStudiantesCurso(curso,){
+    VerStudiantesCurso(curso){
 
         //traer estudiantes, traer notas estudiantes, trae los nombre de los campos
          this.idgrupc = curso.id;
