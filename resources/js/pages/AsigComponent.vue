@@ -15,9 +15,9 @@
                   <th>Mostrar Calificaciones</th>
                   <th>Aciones</th>
                 </tr>
-              </thead>
+            </thead>
 
-              <tbody>
+            <tbody>
                 <tr v-for="curso in cursos" :key="curso.id">
                 <td>{{ curso.id }}</td>
                   <td>{{ curso.fullname }}</td>
@@ -27,7 +27,7 @@
                   <td v-if="curso.visible ==0" >no</td>
                   <td v-if="curso.showgrades ==1" >si</td>
                   <td v-if="curso.showgrades ==0" >no</td>
-<td> <a  class="btn btn-secondary " @click="VerStudiantesCurso(curso)"  data-target="#example" data-toggle="modal">
+                  <td><a  class="btn btn-secondary " @click="VerStudiantesCurso(curso)"  data-target="#example" data-toggle="modal">
                   Todos Estudiantes
                     </a></td>
                   <td  v-show="curso.id== g.courseid" v-for="g in grupo" :key="g.id">

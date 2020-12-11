@@ -19,14 +19,17 @@ Route::get('R', function () {
     return Role::with('user')->get();
 });
 
+Route::group(['prefix' => 'auth'], function () {
+
+    Route::post('login','AuthController@login');
+
+});
 
 Route::resource('Administracion/usuarios','AdministracionUserController');
 
 Route::get('Administracion',[ 'as'=>'administracion', 'uses'=>'PaginaController@administracion'])->middleware('user');
 
 Route::get('/','Auth\LoginController@showLoginForm');
-
-Route::post('login','Auth\LoginController@Login');
 
 Route::get('logout','Auth\LoginController@Logout');
 

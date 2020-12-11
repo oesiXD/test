@@ -57364,13 +57364,13 @@ var routes = [{
   path: "/cursos",
   name: "cursos",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./pages/CursoComponent.vue */ "./resources/js/pages/CursoComponent.vue"));
+    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./pages/CursoComponent.vue */ "./resources/js/pages/CursoComponent.vue"));
   }
 }, {
   path: "/asig",
   name: "asig",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./pages/AsigComponent.vue */ "./resources/js/pages/AsigComponent.vue"));
+    return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./pages/AsigComponent.vue */ "./resources/js/pages/AsigComponent.vue"));
   }
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
