@@ -39,20 +39,20 @@
                                     </a>
                                 </div>
                                 <div class="p-2">
-                                    <form class="form-horizontal" action="index.html">
+                                    <form method="POST" class="form-horizontal" action="auth/login">
 
                                         <div class="form-group">
                                             <label for="username">Correo electronico</label>
-                                            <input type="text" class="form-control" id="username" placeholder="Ingrese su correo">
+                                            <input type="text" class="form-control" id="email" v-model="todo.email" placeholder="Ingrese su correo">
                                         </div>
 
                                         <div class="form-group">
                                             <label for="userpassword">Contraseña</label>
-                                            <input type="password" class="form-control" id="userpassword" placeholder="Ingrese su contraseña">
+                                            <input type="password" class="form-control" id="password" todo.password placeholder="Ingrese su contraseña">
                                         </div>
 
                                         <div class="mt-3">
-                                            <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Ingresar</button>
+                                            <button @click="enviar()" class="btn btn-primary btn-block waves-effect waves-light" type="submit">Ingresar</button>
                                         </div>
                                     <div class="mt-5 text-center">
                             <div>
@@ -76,43 +76,37 @@
 export default {
     data() {
     return {
+         todo:{
+            email:"",
+            password:""
+        },
         video1:"https://player.vimeo.com/external/451754254.sd.mp4?s=d91618dfbf25e5b5ebedcc5b6c23d33ac5f5478e&profile_id=139&oauth2_token_id=57447761",
         video2:"https://player.vimeo.com/external/451834055.sd.mp4?s=b395f49a0ac32ec44af2ef2ad307b7149b26ae89&profile_id=139&oauth2_token_id=57447761",
         video3:"https://player.vimeo.com/external/371853906.sd.mp4?s=fbde7b607df84867c1dc8741fc74b9d6433cef9f&profile_id=139&oauth2_token_id=57447761",
     }
 },
-    methods: {
-            loadVideos(){
-                var video1 = document.getElementById('video1');
-                var video2 = document.getElementById('video2');
-                var video3 = document.getElementById('video3');
-
-
-                    video1.onended = function(){
-                    video2.play();
-                    video1.style.opacity=0;
-                    video3.style.opacity=0;
-                    video2.style.opacity=1;
-                    }
-                    video2.onended = function(){
-                        video3.play();
-                        video2.style.opacity=0;
-                        video1.style.opacity=0;
-                        video3.style.opacity=1;
-                    }
-                    video3.onended = function(){
-                        video1.play();
-                        video2.style.opacity=0;
-                        video3.style.opacity=0;
-                        video1.style.opacity=1;
-                    }
+methods: {
+    enviar(){
+         axios.post("auth/login",{dato:todo}).then((res) => {
+      });
+      this.todo.email ="";
+      this.todo.password="";
+    },
+    loadVideos(){
+        var video1 = document.getElementById('video1');
+        var video2 = document.getElementById('video2');
+        var video3 = document.getElementById('video3');
+            video1.onended = function(){
+            video2.play();
+            video1.style.opacity=0;
+            video3.style.opacity=0;
+            video2.style.opacity=1;
             }
         },
     created() {
         this.loadVideos();
     },
 }
-
 </script>
 
 
@@ -145,4 +139,3 @@ export default {
         background-color: rgb(0, 0, 0,0.5);
     }
 </style>
-

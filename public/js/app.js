@@ -2217,124 +2217,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/LoginComponent.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      video1: "https://player.vimeo.com/external/451754254.sd.mp4?s=d91618dfbf25e5b5ebedcc5b6c23d33ac5f5478e&profile_id=139&oauth2_token_id=57447761",
-      video2: "https://player.vimeo.com/external/451834055.sd.mp4?s=b395f49a0ac32ec44af2ef2ad307b7149b26ae89&profile_id=139&oauth2_token_id=57447761",
-      video3: "https://player.vimeo.com/external/371853906.sd.mp4?s=fbde7b607df84867c1dc8741fc74b9d6433cef9f&profile_id=139&oauth2_token_id=57447761"
-    };
-  },
-  methods: {
-    loadVideos: function loadVideos() {
-      var video1 = document.getElementById('video1');
-      var video2 = document.getElementById('video2');
-      var video3 = document.getElementById('video3');
-
-      video1.onended = function () {
-        video2.play();
-        video1.style.opacity = 0;
-        video3.style.opacity = 0;
-        video2.style.opacity = 1;
-      };
-
-      video2.onended = function () {
-        video3.play();
-        video2.style.opacity = 0;
-        video1.style.opacity = 0;
-        video3.style.opacity = 1;
-      };
-
-      video3.onended = function () {
-        video1.play();
-        video2.style.opacity = 0;
-        video3.style.opacity = 0;
-        video1.style.opacity = 1;
-      };
-    }
-  },
-  created: function created() {
-    this.loadVideos();
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Volumes/HDD/proyectos/test/test/resources/js/pages/LoginComponent.vue: Unexpected token (88:0)\n\n\u001b[0m \u001b[90m 86 | \u001b[39m    }\u001b[0m\n\u001b[0m \u001b[90m 87 | \u001b[39m}\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 88 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 89 | \u001b[39m    methods\u001b[33m:\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 90 | \u001b[39m            loadVideos(){\u001b[0m\n\u001b[0m \u001b[90m 91 | \u001b[39m                \u001b[36mvar\u001b[39m video1 \u001b[33m=\u001b[39m document\u001b[33m.\u001b[39mgetElementById(\u001b[32m'video1'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n    at Parser._raise (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:764:17)\n    at Parser.raiseWithData (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:757:17)\n    at Parser.raise (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:751:17)\n    at Parser.unexpected (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:8927:16)\n    at Parser.parseIdentifierName (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:11020:18)\n    at Parser.parseIdentifier (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:10997:23)\n    at Parser.parseMaybePrivateName (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:10308:19)\n    at Parser.parsePropertyName (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:10798:155)\n    at Parser.parsePropertyDefinition (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:10692:22)\n    at Parser.parseObjectLike (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:10609:25)\n    at Parser.parseExprAtom (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:10143:23)\n    at Parser.parseExprSubscripts (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:9789:23)\n    at Parser.parseUpdate (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:9769:21)\n    at Parser.parseMaybeUnary (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:9758:17)\n    at Parser.parseExprOps (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:9628:23)\n    at Parser.parseMaybeConditional (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:9602:23)\n    at Parser.parseMaybeAssign (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:9565:21)\n    at Parser.parseExportDefaultExpression (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:12536:24)\n    at Parser.parseExport (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:12438:31)\n    at Parser.parseStatementContent (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:11437:27)\n    at Parser.parseStatement (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:11331:17)\n    at Parser.parseBlockOrModuleBlockBody (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:11913:25)\n    at Parser.parseBlockBody (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:11899:10)\n    at Parser.parseTopLevel (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:11262:10)\n    at Parser.parse (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:12967:10)\n    at parse (/Volumes/HDD/proyectos/test/test/node_modules/@babel/parser/lib/index.js:13020:38)\n    at parser (/Volumes/HDD/proyectos/test/test/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Volumes/HDD/proyectos/test/test/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Volumes/HDD/proyectos/test/test/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/Volumes/HDD/proyectos/test/test/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/Volumes/HDD/proyectos/test/test/node_modules/gensync/index.js:254:32)\n    at /Volumes/HDD/proyectos/test/test/node_modules/gensync/index.js:266:13");
 
 /***/ }),
 
@@ -39163,7 +39048,81 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "row justify-content-center " }, [
+        _c("div", { staticClass: "col-md-8 col-lg-6 col-xl-4 mt-5" }, [
+          _c("div", { staticClass: "card overflow-hidden mt-5" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body pt-0" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "p-2" }, [
+                _c(
+                  "form",
+                  {
+                    staticClass: "form-horizontal",
+                    attrs: { method: "POST", action: "auth/login" }
+                  },
+                  [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "username" } }, [
+                        _vm._v("Correo electronico")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.todo.email,
+                            expression: "todo.email"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          id: "email",
+                          placeholder: "Ingrese su correo"
+                        },
+                        domProps: { value: _vm.todo.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.todo, "email", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-3" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "btn btn-primary btn-block waves-effect waves-light",
+                          attrs: { type: "submit" },
+                          on: {
+                            click: function($event) {
+                              return _vm.enviar()
+                            }
+                          }
+                        },
+                        [_vm._v("Ingresar")]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(3)
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   ])
 }
@@ -39172,115 +39131,70 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row justify-content-center " }, [
-      _c("div", { staticClass: "col-md-8 col-lg-6 col-xl-4 mt-5" }, [
-        _c("div", { staticClass: "card overflow-hidden mt-5" }, [
-          _c("div", { staticClass: "bg-soft-primary " }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-7" }, [
-                _c("div", { staticClass: "text-primary p-4" }, [
-                  _c("h5", { staticClass: "text-primary" }, [
-                    _vm._v("Bienvenido")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("Inicia sesión con tu correo electronico")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-5 align-self-end" }, [
-                _c("img", {
-                  staticClass: "img-fluid",
-                  attrs: { src: "images/books.png", alt: "" }
-                })
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body pt-0" }, [
-            _c("div", [
-              _c("a", { attrs: { href: "http://www.citizenapp.cl/" } }, [
-                _c("div", { staticClass: "avatar-md profile-user-wid mb-4" }, [
-                  _c(
-                    "span",
-                    { staticClass: "avatar-title rounded-circle bg-light" },
-                    [
-                      _c("img", {
-                        staticClass: "rounded-circle",
-                        attrs: {
-                          src: "images/Isotipo.png",
-                          alt: "",
-                          height: "64"
-                        }
-                      })
-                    ]
-                  )
-                ])
-              ])
-            ]),
+    return _c("div", { staticClass: "bg-soft-primary " }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-7" }, [
+          _c("div", { staticClass: "text-primary p-4" }, [
+            _c("h5", { staticClass: "text-primary" }, [_vm._v("Bienvenido")]),
             _vm._v(" "),
-            _c("div", { staticClass: "p-2" }, [
-              _c(
-                "form",
-                {
-                  staticClass: "form-horizontal",
-                  attrs: { action: "index.html" }
-                },
-                [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", { attrs: { for: "username" } }, [
-                      _vm._v("Correo electronico")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "text",
-                        id: "username",
-                        placeholder: "Ingrese su correo"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", { attrs: { for: "userpassword" } }, [
-                      _vm._v("Contraseña")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "password",
-                        id: "userpassword",
-                        placeholder: "Ingrese su contraseña"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-3" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "btn btn-primary btn-block waves-effect waves-light",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Ingresar")]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "mt-5 text-center" }, [
-                    _c("div", [
-                      _c("p", [
-                        _vm._v("© 2020 Citizen. Creado con  "),
-                        _c("i", { staticClass: "mdi mdi-heart text-danger" }),
-                        _vm._v(" por sus Desarrolladores")
-                      ])
-                    ])
-                  ])
-                ]
-              )
-            ])
+            _c("p", [_vm._v("Inicia sesión con tu correo electronico")])
           ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-5 align-self-end" }, [
+          _c("img", {
+            staticClass: "img-fluid",
+            attrs: { src: "images/books.png", alt: "" }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("a", { attrs: { href: "http://www.citizenapp.cl/" } }, [
+        _c("div", { staticClass: "avatar-md profile-user-wid mb-4" }, [
+          _c("span", { staticClass: "avatar-title rounded-circle bg-light" }, [
+            _c("img", {
+              staticClass: "rounded-circle",
+              attrs: { src: "images/Isotipo.png", alt: "", height: "64" }
+            })
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("label", { attrs: { for: "userpassword" } }, [_vm._v("Contraseña")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "password",
+          id: "password",
+          "todo.password": "",
+          placeholder: "Ingrese su contraseña"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-5 text-center" }, [
+      _c("div", [
+        _c("p", [
+          _vm._v("© 2020 Citizen. Creado con  "),
+          _c("i", { staticClass: "mdi mdi-heart text-danger" }),
+          _vm._v(" por sus Desarrolladores")
         ])
       ])
     ])
