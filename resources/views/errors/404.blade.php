@@ -10,6 +10,6 @@
    <h1>se a producido un error 404 </h1>
 <h2>   no se a encontrado la ruta que intentas accedeer </h2>
 
-<a href="{{route('home')}}"><button >HOME</button></a>
+
 </body>
 </html>

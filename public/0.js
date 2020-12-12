@@ -144,6 +144,91 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -154,9 +239,9 @@ __webpack_require__.r(__webpack_exports__);
       studentnt: [],
       grupo: [],
       idgrup: "",
-      name: '',
+      name: "",
       idgrupc: "",
-      namec: ''
+      namec: ""
     };
   },
   methods: {
@@ -266,7 +351,7 @@ var render = function() {
                         _c(
                           "a",
                           {
-                            staticClass: "btn btn-secondary ",
+                            staticClass: "btn btn-secondary",
                             attrs: {
                               "data-target": "#example",
                               "data-toggle": "modal"
@@ -279,7 +364,7 @@ var render = function() {
                           },
                           [
                             _vm._v(
-                              "\n                Todos Estudiantes\n                  "
+                              "\n                    Todos Estudiantes\n                  "
                             )
                           ]
                         )
@@ -294,7 +379,7 @@ var render = function() {
                                 name: "show",
                                 rawName: "v-show",
                                 value: curso.id == g.courseid,
-                                expression: "curso.id== g.courseid"
+                                expression: "curso.id == g.courseid"
                               }
                             ],
                             key: g.id
@@ -308,7 +393,7 @@ var render = function() {
                                     name: "show",
                                     rawName: "v-show",
                                     value: curso.id == g.courseid,
-                                    expression: "curso.id== g.courseid"
+                                    expression: "curso.id == g.courseid"
                                   }
                                 ],
                                 staticClass: "btn btn-info btn-xs",
@@ -324,7 +409,7 @@ var render = function() {
                               },
                               [
                                 _vm._v(
-                                  "\n                 Estudiantes " +
+                                  "\n                    Estudiantes " +
                                     _vm._s(g.name) +
                                     "\n                  "
                                 )
@@ -355,7 +440,7 @@ var render = function() {
                               attrs: { role: "document" }
                             },
                             [
-                              _c("div", { staticClass: "modal-content " }, [
+                              _c("div", { staticClass: "modal-content" }, [
                                 _c("div", { staticClass: "modal-header" }, [
                                   _c(
                                     "h5",
@@ -363,7 +448,13 @@ var render = function() {
                                       staticClass: "modal-title",
                                       attrs: { id: "exampleModalLongTitle" }
                                     },
-                                    [_vm._v(" " + _vm._s(_vm.name) + " ")]
+                                    [
+                                      _vm._v(
+                                        "\n                          " +
+                                          _vm._s(_vm.name) +
+                                          "\n                        "
+                                      )
+                                    ]
                                   ),
                                   _vm._v(" "),
                                   _vm._m(1, true)
@@ -406,7 +497,7 @@ var render = function() {
                                             c.address == ""
                                               ? _c("td", [
                                                   _vm._v(
-                                                    "No notiene una direcion asociada"
+                                                    "\n                              No notiene una direcion asociada\n                            "
                                                   )
                                                 ])
                                               : _vm._e(),
@@ -420,7 +511,7 @@ var render = function() {
                                             c.city == ""
                                               ? _c("td", [
                                                   _vm._v(
-                                                    "No notiene una ciudad asociada"
+                                                    "\n                              No notiene una ciudad asociada\n                            "
                                                   )
                                                 ])
                                               : _vm._e(),
@@ -465,7 +556,7 @@ var render = function() {
                               attrs: { role: "document" }
                             },
                             [
-                              _c("div", { staticClass: "modal-content " }, [
+                              _c("div", { staticClass: "modal-content" }, [
                                 _c("div", { staticClass: "modal-header" }, [
                                   _c(
                                     "h5",
@@ -473,7 +564,13 @@ var render = function() {
                                       staticClass: "modal-title",
                                       attrs: { id: "exampleModalLongTitle" }
                                     },
-                                    [_vm._v(" " + _vm._s(_vm.namec) + " ")]
+                                    [
+                                      _vm._v(
+                                        "\n                          " +
+                                          _vm._s(_vm.namec) +
+                                          "\n                        "
+                                      )
+                                    ]
                                   ),
                                   _vm._v(" "),
                                   _vm._m(4, true)
@@ -493,7 +590,13 @@ var render = function() {
                                             _vm._v(" "),
                                             _c("th", [_vm._v("Nombre")]),
                                             _vm._v(" "),
-                                            _c("th", [_vm._v("Apellido")]),
+                                            _c("th", [_vm._v("Nombre Corto")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Email")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("telefono")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Direcion")]),
                                             _vm._v(" "),
                                             _c("th", [_vm._v("Ciudad")]),
                                             _vm._v(" "),
@@ -506,21 +609,18 @@ var render = function() {
                                                       name: "show",
                                                       rawName: "v-show",
                                                       value:
-                                                        _vm.studentn.length >
-                                                          0 &&
-                                                        _vm.studentc[0].id ==
-                                                          c.userid,
+                                                        _vm.studentn.length > 0,
                                                       expression:
-                                                        "studentn.length>0&&studentc[0].id ==c.userid"
+                                                        "studentn.length > 0"
                                                     }
                                                   ],
                                                   key: c.id
                                                 },
                                                 [
                                                   _vm._v(
-                                                    " " +
+                                                    "\n                              " +
                                                       _vm._s(c.itemname) +
-                                                      " "
+                                                      "\n                            "
                                                   )
                                                 ]
                                               )
@@ -547,10 +647,40 @@ var render = function() {
                                                 _vm._v(_vm._s(c.lastname))
                                               ]),
                                               _vm._v(" "),
+                                              _c("td", [
+                                                _vm._v(_vm._s(c.email))
+                                              ]),
+                                              _vm._v(" "),
+                                              c.phone1 == ""
+                                                ? _c("td", [
+                                                    _vm._v("No telefono")
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.phone1 != ""
+                                                ? _c("td", [
+                                                    _vm._v(_vm._s(c.phone1))
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.address == ""
+                                                ? _c("td", [
+                                                    _vm._v(
+                                                      "\n                              No notiene una direcion asociada\n                            "
+                                                    )
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              c.address != ""
+                                                ? _c("td", [
+                                                    _vm._v(_vm._s(c.address))
+                                                  ])
+                                                : _vm._e(),
+                                              _vm._v(" "),
                                               c.city == ""
                                                 ? _c("td", [
                                                     _vm._v(
-                                                      "No notiene una ciudad asociada"
+                                                      "\n                              No notiene una ciudad asociada\n                            "
                                                     )
                                                   ])
                                                 : _vm._e(),
@@ -571,14 +701,16 @@ var render = function() {
                                                         rawName: "v-show",
                                                         value: c.id == n.userid,
                                                         expression:
-                                                          "c.id==n.userid"
+                                                          "c.id == n.userid"
                                                       }
                                                     ],
                                                     key: n.id
                                                   },
                                                   [
                                                     _vm._v(
-                                                      " " + _vm._s(n.rawgrade)
+                                                      "\n                              " +
+                                                        _vm._s(n.rawgrade) +
+                                                        "\n                            "
                                                     )
                                                   ]
                                                 )
@@ -684,7 +816,7 @@ var staticRenderFns = [
           staticClass: "btn btn-primary",
           attrs: { type: "button", "data-dismiss": "modal" }
         },
-        [_vm._v("Cerrar")]
+        [_vm._v("\n                          Cerrar\n                        ")]
       )
     ])
   },
@@ -716,7 +848,7 @@ var staticRenderFns = [
           staticClass: "btn btn-primary",
           attrs: { type: "button", "data-dismiss": "modal" }
         },
-        [_vm._v("Cerrar")]
+        [_vm._v("\n                          Cerrar\n                        ")]
       )
     ])
   }

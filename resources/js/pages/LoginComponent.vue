@@ -54,8 +54,7 @@
                                         <div class="mt-3">
                                             <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Ingresar</button>
                                         </div>
- <div class="mt-5 text-center">
-
+                                    <div class="mt-5 text-center">
                             <div>
                                 <p>© 2020 Citizen. Creado con  <i class="mdi mdi-heart text-danger"></i> por sus Desarrolladores</p>
                             </div>
@@ -82,34 +81,33 @@ export default {
         video3:"https://player.vimeo.com/external/371853906.sd.mp4?s=fbde7b607df84867c1dc8741fc74b9d6433cef9f&profile_id=139&oauth2_token_id=57447761",
     }
 },
+    methods: {
+            loadVideos(){
+                var video1 = document.getElementById('video1');
+                var video2 = document.getElementById('video2');
+                var video3 = document.getElementById('video3');
 
-methods: {
-    loadVideos(){
-        var video1 = document.getElementById('video1');
-        var video2 = document.getElementById('video2');
-        var video3 = document.getElementById('video3');
 
-
-            video1.onended = function(){
-            video2.play();
-            video1.style.opacity=0;
-            video3.style.opacity=0;
-            video2.style.opacity=1;
+                    video1.onended = function(){
+                    video2.play();
+                    video1.style.opacity=0;
+                    video3.style.opacity=0;
+                    video2.style.opacity=1;
+                    }
+                    video2.onended = function(){
+                        video3.play();
+                        video2.style.opacity=0;
+                        video1.style.opacity=0;
+                        video3.style.opacity=1;
+                    }
+                    video3.onended = function(){
+                        video1.play();
+                        video2.style.opacity=0;
+                        video3.style.opacity=0;
+                        video1.style.opacity=1;
+                    }
             }
-            video2.onended = function(){
-                video3.play();
-                video2.style.opacity=0;
-                video1.style.opacity=0;
-                video3.style.opacity=1;
-            }
-            video3.onended = function(){
-                video1.play();
-                video2.style.opacity=0;
-                video3.style.opacity=0;
-                video1.style.opacity=1;
-            }
-    }
-},
+        },
     created() {
         this.loadVideos();
     },

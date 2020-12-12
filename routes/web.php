@@ -15,23 +15,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('R', function () {
-    return Role::with('user')->get();
-});
 
-Route::group(['prefix' => 'auth'], function () {
 
-    Route::post('login','AuthController@login');
 
-});
 
 Route::resource('Administracion/usuarios','AdministracionUserController');
 
 Route::get('Administracion',[ 'as'=>'administracion', 'uses'=>'PaginaController@administracion'])->middleware('user');
-
-Route::get('/','Auth\LoginController@showLoginForm');
-
-Route::get('logout','Auth\LoginController@Logout');
 
 Route::get('Administracion/nivel','CursoController@nivel');
 Route::get('Administracion/curso','CursoController@index');
